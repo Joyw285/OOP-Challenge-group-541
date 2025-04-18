@@ -1,15 +1,15 @@
 class Pet:
     def __init__(self, name="Coco"):
         self.name = name
-        self.hunger = 5        # Start at a moderate level
+        self.hunger = 5     # Start at a moderate level
         self.energy = 5
         self.happiness = 5
-        self.tricks = []       # List to store learned tricks
+        self.tricks = []    # List to store learned tricks  
 
     def eat(self):
         old_hunger = self.hunger
-        self.hunger = max(0, self.hunger - 3)
-        self.happiness = min(10, self.happiness + 1)
+        self.hunger = max(0, self.hunger - 10)
+        self.happiness = min(10, self.happiness + 10)
         print(f"{self.name} eats. Hunger: {old_hunger} -> {self.hunger}, Happiness increased to {self.happiness}.")
 
     def sleep(self):
@@ -45,5 +45,7 @@ class Pet:
             print(f"{self.name} knows the following tricks: {', '.join(self.tricks)}")
         else:
             print(f"{self.name} hasn't learned any tricks yet.")
+
+            
 
 
